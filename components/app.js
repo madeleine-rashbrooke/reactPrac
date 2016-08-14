@@ -8,8 +8,10 @@ class App extends Component {
 
   render: function () {
     return (
-        <h1>Welcome to {this.props.name}</h1>
-        )
+        <div>
+            <h1>Welcome to {this.props.name}</h1>
+        </div>
+    )
   }
 
 }
