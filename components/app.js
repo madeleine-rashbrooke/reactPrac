@@ -1,17 +1,27 @@
 import React, { Component } from 'react'
 
-class App extends Component {
+var ComplimentMachine = React.createClass ({
+  getInitialState: function(){
+    return {
+        name: ''
+    }
+  },
 
-  constructor (props) {
-    super(props)
-  }
+  handleChange: function (e) {
+    this.setState({
+        name: e.target.value
+    })
+  },
 
   render: function () {
     return (
-        <h1>Welcome to {this.props.name}</h1>
-        )
+        <div>
+            <h1>What is your name?</h1>
+            <input type= "text" onChange={this.handleChange} />
+            <p>{this.props.compliment}, {this.state.name}</p>
+        </div>
+    )
   }
+})
 
-}
-
-export default App
+export default ComplimentMachine
