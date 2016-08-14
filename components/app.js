@@ -19,6 +19,7 @@ var ComplimentMachine = React.createClass ({
             <h1>What is your name?</h1>
             <input type= "text" onChange={this.handleChange} />
             <p>{this.props.compliment}, {this.state.name}</p>
+            <h1>Welcome to {this.props.name}</h1>
         </div>
     )
   }
