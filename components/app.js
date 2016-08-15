@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 var ComplimentMachine = React.createClass ({
   getInitialState: function(){
     return {
-        name: ''
+        name: '',
+        location: ''
     }
   },
 
@@ -13,13 +14,22 @@ var ComplimentMachine = React.createClass ({
     })
   },
 
+   locationChange: function (e) {
+    this.setState({
+        location: e.target.value
+    })
+  },
+
   render: function () {
     return (
         <div>
             <h1>What is your name?</h1>
             <input type= "text" onChange={this.handleChange} />
             <p>{this.props.compliment}, {this.state.name}</p>
-            <h1>Welcome to {this.props.name}</h1>
+
+            <h1>Which city are you in?</h1>
+            <input type= "text" onChange={this.locationChange} />
+            <p>{this.props.welcome}, {this.state.location} </p>
         </div>
     )
   }
