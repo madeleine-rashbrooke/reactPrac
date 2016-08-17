@@ -16,7 +16,6 @@ export default React.createClass ({
         <ComplimentMachine compliment="Your smile is awesome" welcome="Enjoy your stay in" />
         <Weather temp={this.props.data.temperature}/>
       </div>
-
     )
   }
 })
