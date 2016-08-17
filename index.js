@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ComplimentMachine from './components/app'
+import App from './components/App'
+
+const thingthing = {
+    temperature: 42
+}
 
 
 ReactDOM.render(
-    <ComplimentMachine compliment="Your smile is awesome" welcome="Enjoy your stay in"/>,
+    <App data={thingthing}/>,
     document.getElementById('root')
 )
 
